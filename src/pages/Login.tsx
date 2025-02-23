@@ -8,7 +8,7 @@ import { LoginRequest } from "../type";
 
 const validationSchema = Yup.object({
     username: Yup.string().required("نام کاربری را وارد کنید."),
-    password: Yup.string().min(6, "رمز عبور حداقل ۶ کاراکتر باشد").required("رمز عبور را وارد کنید."),
+    password: Yup.string().min(4, "رمز عبور حداقل ۴ کاراکتر باشد").required("رمز عبور را وارد کنید."),
 });
 
 const Login = () => {
@@ -39,12 +39,12 @@ const Login = () => {
                     <div>
                         <label>نام کاربری:</label>
                         <Field type="text" name="username" />
-                        <ErrorMessage name="username" component="div" />
+                        <ErrorMessage name="username" component="div" style={{ color: "red" }} />
                     </div>
                     <div>
                         <label>رمز عبور:</label>
                         <Field type="password" name="password" />
-                        <ErrorMessage name="password" component="div" />
+                        <ErrorMessage name="password" component="div" style={{ color: "red" }} />
                     </div>
                     <button type="submit">ورود</button>
                 </Form>
