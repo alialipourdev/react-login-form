@@ -33,7 +33,7 @@ const Me = () => {
                 localStorage.removeItem("access");
                 localStorage.removeItem("refresh");
                 navigate("/login");
-            }}>خروج</button>
+            }} style={{ background: "#333", padding: "10px 30px", border: "1px solid #444", borderRadius: "10px", margin: "10px", color: "#ddd" }}>خروج</button>
         </div>
     );
 };

@@ -36,17 +36,17 @@ const Login = () => {
                 onSubmit={mutate}
             >
                 <Form>
-                    <div>
+                    <div style={{ padding: "20px" }}>
                         <label>نام کاربری:</label>
-                        <Field type="text" name="username" />
+                        <Field type="text" name="username" style={{ background: "#333", padding: "10px 30px", border: "1px solid #444", borderRadius: "10px", margin: "10px", color: "#fff" }} />
                         <ErrorMessage name="username" component="div" style={{ color: "red" }} />
                     </div>
-                    <div>
+                    <div style={{ padding: "20px" }}>
                         <label>رمز عبور:</label>
-                        <Field type="password" name="password" />
+                        <Field type="password" name="password" style={{ background: "#333", padding: "10px 30px", border: "1px solid #444", borderRadius: "10px", margin: "10px", color: "#fff" }} />
                         <ErrorMessage name="password" component="div" style={{ color: "red" }} />
                     </div>
-                    <button type="submit">ورود</button>
+                    <button type="submit" style={{ background: "#333", padding: "10px 30px", border: "1px solid #444", borderRadius: "10px", margin: "10px", color: "#ddd" }}>ورود</button>
                 </Form>
             </Formik>
             {error && <p style={{ color: "red" }}>{error}</p>}
